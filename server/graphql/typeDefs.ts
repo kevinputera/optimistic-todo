@@ -2,7 +2,7 @@ import { gql } from "apollo-server";
 
 export const typeDefs = gql`
   type Todo {
-    id: ID!
+    id: Int!
     content: String!
   }
 
