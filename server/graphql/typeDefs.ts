@@ -9,4 +9,8 @@ export const typeDefs = gql`
   type Query {
     todos: [Todo!]!
   }
+
+  type Mutation {
+    addTodo(content: String!): Todo!
+  }
 `;

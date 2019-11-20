@@ -1,7 +1,4 @@
-import { getStore } from "../../store";
+import { Query } from "./Query";
+import { Mutation } from "./Mutation";
 
-export const resolvers = {
-  Query: {
-    todos: () => getStore().getTodos()
-  }
-};
+export const resolvers = { Query, Mutation };
