@@ -1,17 +1,6 @@
-import { ApolloServer, gql } from "apollo-server";
+import { ApolloServer } from "apollo-server";
 
-import { resolvers } from "./resolvers";
-
-const typeDefs = gql`
-  type Todo {
-    id: ID!
-    content: String!
-  }
-
-  type Query {
-    todos: [Todo!]!
-  }
-`;
+import { typeDefs, resolvers } from "./graphql";
 
 const server = new ApolloServer({ typeDefs, resolvers });
 

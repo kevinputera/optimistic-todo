@@ -1,4 +1,4 @@
-import { getStore } from "../store";
+import { getStore } from "../../store";
 
 export const resolvers = {
   Query: {
