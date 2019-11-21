@@ -5,7 +5,7 @@ import {
   TodosResult,
   TodosVariables,
   useAddTodoMutation
-} from "../../hooks";
+} from "../../lib/hooks";
 
 export const AddTodoForm: React.FC = () => {
   const [content, setContent] = useState("");
@@ -23,7 +23,8 @@ export const AddTodoForm: React.FC = () => {
           });
         }
       }
-    }
+    },
+    optimisticResponse: { addTodo: { __typename: "Todo", id: 100, content } }
   });
 
   return (
@@ -38,7 +39,9 @@ export const AddTodoForm: React.FC = () => {
         type="submit"
         onClick={e => {
           e.preventDefault();
-          addTodo({ variables: { content } });
+          addTodo({
+            variables: { content }
+          });
         }}
       >
         Add

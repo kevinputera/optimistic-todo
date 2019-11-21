@@ -1,6 +1,6 @@
 import React from "react";
 
-import { useTodosQuery } from "../../hooks";
+import { useTodosQuery } from "../../lib/hooks";
 import { Todo } from "./Todo";
 
 export const TodosList: React.FC = () => {

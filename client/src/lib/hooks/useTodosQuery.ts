@@ -1,11 +1,12 @@
 import { gql } from "apollo-boost";
 import { useQuery, QueryHookOptions } from "@apollo/react-hooks";
 
-import { Todo } from "../typings";
+import { Todo } from "../../typings";
 
 export const TODOS = gql`
   query todos {
     todos {
+      __typename
       id
       content
     }

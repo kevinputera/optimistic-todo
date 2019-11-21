@@ -1,11 +1,12 @@
 import { gql } from "apollo-boost";
 import { useMutation, MutationHookOptions } from "@apollo/react-hooks";
 
-import { Todo } from "../typings";
+import { Todo } from "../../typings";
 
 export const ADD_TODO = gql`
   mutation addTodo($content: String!) {
     addTodo(content: $content) {
+      __typename
       id
       content
     }
